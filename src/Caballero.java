@@ -4,6 +4,7 @@ public class Caballero extends Persona{
     Material material;
     String constelacion;
     Dios dios;
+    Armadura armadura;
 
     //Constructor por defecto
     public Caballero(String nombre) {
@@ -12,22 +13,20 @@ public class Caballero extends Persona{
     }
 
     //Constructor con parametros
-    public Caballero(
-            String nombre, Material material, String constelacion, Dios dios
-    ){
+    public Caballero(String nombre, Material material, String constelacion, Dios dios) {
         //this.nombre=nombre;
         super(nombre);
-        this.material=material;
+        this.material= material;
         this.constelacion=constelacion;
         this.dios=dios;
+        this.armadura=new Armadura(material);
     }
     //Sobrescritura de metodos
 
 
     @Override
     public String toString() {
-        return "Caballero{" + "id=" +super.getId()+
-                ", nombre=" +super.getNombre()+ constelacion+", vida= "+this.vida+", material= "+material+", dios= "+dios + '}';
+        return "Caballero {" + "id=" +super.getId()+", Nombre="+super.getNombre()+", "+"Constelación="+ constelacion+", Vida= "+this.vida+", Armadura= "+material+ ", Durabilidad="+armadura.getDurabilidad()+", Dios= "+dios + '}';
     }
 
     //metodo de getvida, para encapsular el atributo vida

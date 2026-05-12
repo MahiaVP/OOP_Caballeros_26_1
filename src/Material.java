@@ -1,8 +1,6 @@
 public enum Material {
 
-    ORO,
-    PLATA,
-    BRONCE,
-    ESCAMAS
+    ORO,PLATA,BRONCE,ESCAMAS
+
 }
 
